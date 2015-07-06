@@ -23,6 +23,8 @@ include 'Setup'
 include 'brandeis/Resource'
 include 'brandeis/ServicesOpenNLP2.0.0'
 include 'brandeis/ServicesStanford2.0.0'
+include 'brandeis/ServicesLinePipe'
+include 'brandeis/ServicesGnat'
 
 include 'brandeis/Users'
 

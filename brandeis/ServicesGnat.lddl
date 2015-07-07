@@ -1,0 +1,29 @@
+include 'Servers'
+include 'Database'
+include 'Common'
+include 'Functions'
+
+
+def VERSION = "0.0.1"
+def ROOT = "http://eldrad.cs-i.brandeis.edu:8282/manchester-gnat/${VERSION}/services"
+
+License = 'Apache License, Version 2.0'
+
+
+services = [
+    [
+      id:'gnat.namedentityrecognizer',
+      name:"Manchester Gnat  (v${VERSION}) NamedEntityRecognizer",
+      url:"${ROOT}/GnatWS",
+      desc:'Manchester Gnat  NamedEntityRecognizer',
+      lang:'(English)',
+      license:License
+    ],
+]
+
+
+
+services.each {
+    comment it.name
+    register_service(it)
+}
